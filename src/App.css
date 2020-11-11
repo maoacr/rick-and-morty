@@ -1,5 +1,35 @@
 .App {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1220px;
+}
+
+.Card {
+  width: 20%;
+  margin: 10px;
+}
+.Card img {
+  width: 100%;
+  height: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .Card {
+    width: 30%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .Card {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .Card {
+    width: 80%;
+  }
 }

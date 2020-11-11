@@ -13,29 +13,23 @@ const App = () => {
     })
   }, [])
 
-  console.log(characters)
+  console.log(characters);
 
-
-  // useEffect(() => {
-  //   fetch(`${API}`)
-  //     .then((response) => {
-  //       const data = response.json();
-  //       return data;
-  //     })
-  //     .then((data) => {
-  //       const results = data.pokemon_entries.map( item => {
-  //         return { 
-  //           name: item.pokemon_species.name,
-  //           id: item.entry_number
-  //         }
-  //       }) 
-  //       setCharacter(results) 
-  //     });
-  //   }, []);
-
+  const card = characters.map(character => {
+    console.log(character)
+    return (
+      <React.Fragment>
+        <div className="Card">
+          <img src={character.image} />
+        </div>
+      </React.Fragment>
+    )
+  } ) 
 
   return (
-    <div className="App"></div>
+    <div className="App">
+      {card}
+    </div>
   );
 }
 
